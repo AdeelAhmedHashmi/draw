@@ -1,0 +1,141 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+body{
+    background-color: #794545;
+    height: 0px;
+    overflow: hidden;
+}
+
+li{
+    list-style: none;
+}
+input:focus{
+    outline: none;
+}
+a{
+    text-decoration: none;
+}
+canvas{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -3;
+    background-color: white;
+    cursor: none;
+}
+.cursor{
+    position: absolute;
+    z-index: 2000;
+    top: 40vh;
+    left: 40vw;
+    cursor: none;
+}
+nav{
+    position: relative;
+    z-index: 1000;
+}
+nav ul{
+    background-color: black;
+    box-shadow: 0 0 10px 4px rgba(128, 128, 128, 0.301);
+    border-bottom: 1px solid whitesmoke;
+    padding: 5px;
+    color: aliceblue;
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 20px;
+}
+.logo img{
+    height: 30px;
+}
+.options{
+    display: flex;
+    column-gap: 10px;
+}
+input:hover{
+    cursor: grab;
+}
+input:active{
+    cursor: grabbing;
+}
+nav li:hover{
+    scale: 1.2;
+    cursor: pointer;
+}
+.settings{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    background-color: rgba(112, 125, 136, 0.911);
+    column-gap: 2%;
+    position: relative;
+    z-index: 1;
+    transition: all 0.5s ease-in;
+}
+.settings div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.inputs{
+    column-gap: 10%;
+}
+.tools{
+    border: 1px solid rgb(224, 216, 216);
+    cursor: pointer;
+}
+.tools div{
+    border: 1px solid rgb(48, 46, 46);
+    padding: 2px 7px;
+}
+.tools div:hover{
+    background-color: rgba(240, 248, 255, 0.205);
+}
+.tools div:active{
+    scale: 0.9;
+}
+.tools div:focus{
+    scale: 0.9;
+}
+i{
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.inputs,.tools,.save-btn{
+    margin: 8px 0;
+}
+#saveBtn{
+    padding: 4px 6px;
+    background-color: black;
+    box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.288);
+    color: white;
+    cursor: pointer;
+}
+input[type="range"]{
+    width: 60px;
+}
+.placeholder{
+    height: 87vh;
+    width: 100vw;
+    font-size: 2rem;
+    color: gray;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.placeholder p{
+    font-size: 0.8rem;
+    margin-top: 20px;
+}

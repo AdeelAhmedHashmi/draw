@@ -1,0 +1,4 @@
+.show{ transform: translateY(0%); }
+.hide{ transform: translateY(-100%); }
+.back{ display: none; }
+.dark{ background-color: black; }
