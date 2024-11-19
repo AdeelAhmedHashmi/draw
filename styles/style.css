@@ -5,7 +5,7 @@
     user-select: none;
 }
 body{
-    background-color: #794545;
+    background-color: #ffffff;
     height: 0px;
     overflow: hidden;
 }
@@ -43,7 +43,7 @@ nav ul{
     box-shadow: 0 0 10px 4px rgba(128, 128, 128, 0.301);
     border-bottom: 1px solid whitesmoke;
     padding: 5px;
-    color: aliceblue;
+    color: rgb(255, 255, 255);
     font-size: 1.3rem;
     display: flex;
     align-items: center;

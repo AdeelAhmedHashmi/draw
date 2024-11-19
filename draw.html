@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,8 +8,8 @@
     <link rel="stylesheet" href="./styles/style.css">
     <link rel="stylesheet" href="./styles/control.css">
     <link rel="icon" type="image/svg+xml" href="./images/fav.svg">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body>
     <div class="cursor">✏️</div>
     <header>
@@ -16,25 +17,25 @@
             <ul>
                 <div class="logo"><a href="./index.html"><img src="./images/fav.svg" alt="Logo"></a></div>
                 <div class="options">
-                    <li id="menu-btn"><i class="fa-solid fa-screwdriver-wrench"></i></li>
+                    <li><a id="download" download="myImage.jpg" href="" onclick="download_img(this);">📂</a></li>
+                    <li id="menu-btn">🛠</li>
                 </div>
             </ul>
         </nav>
     </header>
-
     <div class="settings hide">
         <div class="inputs">
             <input type="color" id="color">
             <input type="range" id="lenght" min="1" max="4">
-        </div>                  
+        </div>
         <div class="tools">
             <div class="pen">✏️</div>
             <div class="marker">🖌️</div>
             <div class="eraser">🧽</div>
-        </div>                    
+        </div>
         <div class="save-btn">
             <button id="saveBtn" type="submit">Ok</button>
-        </div>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+        </div>
     </div>
     <div class="placeholder">
         Draw Anythings and Enjoy
@@ -46,4 +47,6 @@
 <script src="./scripts/constants.js"></script>
 <script src="./scripts/script.js"></script>
 <script src="./scripts/setting.js"></script>
+<script src="./scripts/save.js"></script>
+
 </html>
