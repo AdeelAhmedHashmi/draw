@@ -1,25 +1,33 @@
+function normal(){
+  ctx.globalCompositeOperation = "source-over";
+}
 // Main Logic
 function setcolor(color){
     ctx.strokeStyle = color;
+    normal()
 }
 
 function setBold(lenght){
     ctx.lineWidth = lenght;
+    normal()
 }
 
 function setPen(){
+    normal()
     ctx.lineWidth = '2';
     cursor.innerHTML = '✏️';
 }
 
 function setMarker(){
+    normal()
     ctx.lineWidth = '7';
     cursor.innerHTML = '🖌️';
 }
 
 function setEraser(){
-        ctx.strokeStyle = 'white';
+        //ctx.strokeStyle = 'white';
         ctx.lineWidth = '25';
+        ctx.globalCompositeOperation = "destination-out";
         cursor.innerHTML = '🧽';
 }
 

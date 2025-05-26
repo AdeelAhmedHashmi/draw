@@ -6,6 +6,8 @@
     <title>Start-Sketch-Book</title>
     <link rel="stylesheet" href="./styles/draw.css">
     <link rel="icon" type="image/svg+xml" href="./images/fav.svg">
+    <link rel="manifest" href="./manifest.json">
+<meta name="theme-color" content="#8884ff">
 </head>
 <body>
     <canvas id="my-canvas"></canvas>
@@ -19,6 +21,13 @@
     </section>
 </body>
 <script src="./scripts/bg.js"></script>
+<script>
+  if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('./service-worker.js')
+    .then(reg => console.log('Service Worker registered:', reg.scope))
+    .catch(err => console.error('SW registration failed:', err));
+  }
+</script>
 </html>
 
   

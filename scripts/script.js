@@ -1,7 +1,7 @@
 
-canvas.addEventListener('mousemove',(e)=>{
-    cursor.style.left = e.clientX+2+'px'
-    cursor.style.top = e.clientY-18+'px'
+canvas.addEventListener('touchmove',(e)=>{
+    cursor.style.left = e.touches[0].clientX+2+'px'
+    cursor.style.top = e.touches[0].clientY-18+'px'
 })
 function showMenu(){
     if(!states.show){
@@ -29,18 +29,18 @@ const ctx = canvas.getContext('2d');
 function main(){
     ctx.beginPath();
     ctx.lineWidht = 2;
-    canvas.addEventListener('pointermove',(e)=>{
+    canvas.addEventListener('touchmove',(e)=>{
         if(states.ready == true){
-            ctx.lineTo(e.clientX,e.clientY)
+            ctx.lineTo(e.touches[0].clientX,e.touches[0].clientY)
             ctx.stroke()
         }
     })
-    canvas.addEventListener('pointerup',(e)=>{
+    canvas.addEventListener('touchend',(e)=>{
         states.ready = false;
     })
-    canvas.addEventListener('pointerdown',(e)=>{
+    canvas.addEventListener('touchstart',(e)=>{
         states.ready = true;
-        ctx.moveTo(e.clientX,e.clientY);
+        ctx.moveTo(e.touches[0].clientX,e.touches[0].clientY);
     })
 }
 main();
